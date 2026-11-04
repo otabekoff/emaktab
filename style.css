@@ -1,8 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid rgb(203, 203, 203);
+  box-shadow: 2px 4px 10px 0px lightgrey;
   height: 80px;
 }
 
@@ -20,12 +27,106 @@ nav .container img {
 }
 
 nav .container .havolalar {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 20px;
 }
 nav .container .havolalar a {
-    color: black;
-    text-decoration: none;
-    font-size: 22px;
-    font-family: sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  transition: color 400ms;
+  border-right: 1px solid grey;
+  padding-right: 20px;
+}
+
+nav .container .havolalar a:hover {
+  text-decoration: underline;
+  color: rgb(164, 164, 164);
+}
+
+nav .container .tugmalar select#til-tanlovchi {
+  border: 2px solid transparent;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: rgb(7, 206, 206);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav .container .tugmalar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+nav .container .tugmalar #kirish {
+  border: 2px solid rgb(7, 206, 206);
+  color: rgb(7, 206, 206);
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav .container .tugmalar #kirish:hover {
+  background: rgb(221, 237, 240);
+  cursor: pointer;
+}
+
+nav .container .tugmalar #ulash {
+  border: 2px solid rgb(7, 206, 73);
+  color: rgb(7, 206, 73);
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav .container .tugmalar #ulash:hover {
+  background: rgb(221, 240, 228);
+  cursor: pointer;
+}
+
+
+/* Main qismi boshlandi */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 82px);
+}
+main .card-container {
+  min-width:650px;
+}
+
+main .row-1 {
+  color: white;
+  background: rgb(8, 8, 101);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-inline: 40px;
+}
+
+main .row-1 h1 {
+  font-family: cursive;
+}
+
+main .row-1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+main .row-2 {
+  min-height: 250px;
+  background: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
